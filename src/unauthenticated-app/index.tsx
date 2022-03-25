@@ -3,8 +3,6 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { Card, Divider, Button } from 'antd'
 
-import left from 'assets/left.svg'
-import right from 'assets/right.svg'
 import logo from 'assets/logo.svg'
 import { ErrorBox } from 'components/lib'
 import { useDocumentTitle } from 'utils'
@@ -50,6 +48,7 @@ const Title = styled.h2`
 const ShadowCard = styled(Card)`
   width: 40rem;
   min-height: 56rem;
+  margin-top: 5rem;
   padding: 3.2rem 4rem;
   border-radius: 0.3rem;
   box-sizing: border-box;
@@ -61,17 +60,12 @@ const Background = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: left bottom, right bottom;
-  background-size: calc(((100vw - 40rem) / 2) - 3.2rem),
-    calc(((100vw - 40rem) / 2) - 3.2rem), cover;
-  background-image: url(${left}), url(${right});
 `
 
 const Header = styled.header`
   background: url(${logo}) no-repeat center;
   padding: 5rem 0;
+  margin-top: 15rem;
   background-size: 14rem;
   width: 100%;
 `
