@@ -24,6 +24,7 @@ export const useConfig = (
     }
   }
 }
+
 // 配置 拖拽列表变化的的后台参数
 export const useReorderKanbanConfig = (queryKey: QueryKey) =>
   useConfig(queryKey, (target, old) => reorder({ list: old, ...target }))

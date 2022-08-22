@@ -30,6 +30,7 @@ export const useProject = (id?: number) => {
   )
 }
 
+// patch请求是一个局部更新，后端仅更新接收到的字段
 export const useEditProject = (queryKey: QueryKey) => {
   const client = useHttp()
   return useMutation(
@@ -54,6 +55,7 @@ export const useDeleteProject = (queryKey: QueryKey) => {
   )
 }
 
+// POST 与 PUT 区别在于，POST不是幂等的，多次提交可能会发生错误
 export const useAddProject = (queryKey: QueryKey) => {
   const client = useHttp()
 
