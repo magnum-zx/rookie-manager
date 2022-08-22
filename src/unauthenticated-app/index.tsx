@@ -13,7 +13,7 @@ export default function UnauthenticatedApp() {
   const [isRegister, setIsRegister] = useState<boolean>(false)
   const [error, setError] = useState<Error | null>(null)
 
-  useDocumentTitle('task-management')
+  useDocumentTitle('Rookie')
 
   return (
     <Container>
